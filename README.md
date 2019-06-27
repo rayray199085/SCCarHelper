@@ -15,9 +15,9 @@ This app is used for displaying car images and details
 #### 2) Write view model functions for controllers
 #### 3) According to the JSON, build models and then transfer JSON to model
 #### 4) Fill data to collection views and labels
-### 4. Adjust Rotation
+### 4. Adjust Rotation direction
 #### 1) Custom a navigation controller, to disable rotation according to navigation controller's children. For example, if children is equal to 2, it means details view is being shown. Because the main view is embeded in a navigation controller.
 #### 2) Force details view controller to display in portrait
-### 5. Test this app in both simulator and devices
+### 5. Test this app on both simulator and devices
 ----
 ## Starting Time: From 9:30 am to 7:00 pm on 27 of June
