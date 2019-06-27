@@ -14,7 +14,7 @@ This app is used for displaying car images and details
 #### 1) Write network manager functions for loading car basic information and car details information
 #### 2) Write view model functions for controllers
 #### 3) According to the JSON, build models and then transfer JSON to model
-#### 4) Fill data to colection views and labels
+#### 4) Fill data to collection views and labels
 ### 4. Adjust Rotation
 #### 1) Custom a navigation controller, to disable rotation according to navigation controller's children. For example, if children is equal to 2, it means details view is being shown. Because the main view is embeded in a navigation controller.
 #### 2) Force details view controller to display in portrait
