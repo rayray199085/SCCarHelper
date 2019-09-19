@@ -11,7 +11,7 @@ import SVProgressHUD
 
 private let reuseIdentifier = "collection_cell_id"
 class SCDetailsViewController: UIViewController {
-    var viewModel: SCCarViewModel?
+    var listViewModel: SCCarListViewModel?
     
     @IBOutlet weak var separatorView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -28,7 +28,7 @@ class SCDetailsViewController: UIViewController {
         loadData()
     }
     deinit {
-        viewModel?.detailsResult = nil
+        listViewModel?.carDetailsViewModels = nil
     }
 }
 private extension SCDetailsViewController{
@@ -43,12 +43,13 @@ private extension SCDetailsViewController{
     }
     func loadData(){
         SVProgressHUD.show()
-        viewModel?.loadCarDetailsData(completion: { [weak self](isSuccess) in
+        listViewModel?.loadCarDetailsData(completion: { [weak self](isSuccess) in
             SVProgressHUD.dismiss()
-            self?.locationLabel.text = self?.viewModel?.detailsResult?.Result?.first?.Overview?.Location
-            self?.priceLabel.text = self?.viewModel?.detailsResult?.Result?.first?.Overview?.Price
-            self?.statusLabel.text = self?.viewModel?.detailsResult?.Result?.first?.SaleStatus
-            self?.textView.text = self?.viewModel?.detailsResult?.Result?.first?.Comments
+            
+            self?.locationLabel.text = self?.listViewModel?.carDetailsViewModels?.first?.carDetailsData.Overview?.Location
+            self?.priceLabel.text = self?.listViewModel?.carDetailsViewModels?.first?.carDetailsData.Overview?.Price
+            self?.statusLabel.text = self?.listViewModel?.carDetailsViewModels?.first?.carDetailsData.SaleStatus
+            self?.textView.text = self?.listViewModel?.carDetailsViewModels?.first?.carDetailsData.Comments
             self?.separatorView.isHidden = false
             self?.collectionView.reloadData()
         })
@@ -60,13 +61,13 @@ extension SCDetailsViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel?.detailsResult?.Result?.first?.Overview?.carImages?.count ?? 0
+        return listViewModel?.carDetailsViewModels?.first?.carDetailsData.Overview?.Photos?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SCImageCollectionViewCell
         
-        cell.carImage = viewModel?.detailsResult?.Result?.first?.Overview?.carImages?[indexPath.item]
+        cell.carImageUrlString = listViewModel?.carDetailsViewModels?.first?.carDetailsData.Overview?.Photos?[indexPath.item]
         return cell
     }
 }

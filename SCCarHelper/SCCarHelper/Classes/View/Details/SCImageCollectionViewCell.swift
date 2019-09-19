@@ -9,9 +9,12 @@
 import UIKit
 
 class SCImageCollectionViewCell: UICollectionViewCell {
-    var carImage: UIImage?{
+    var carImageUrlString: String?{
         didSet{
-            carImageView.image = carImage
+            carImageView.setImage(
+                urlString: carImageUrlString,
+                backgroundColor: UIColor.white,
+                placeholderImage: nil)
         }
     }
     @IBOutlet weak var carImageView: UIImageView!

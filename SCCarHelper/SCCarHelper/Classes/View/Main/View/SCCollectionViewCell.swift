@@ -9,12 +9,16 @@
 import UIKit
 
 class SCCollectionViewCell: UICollectionViewCell {
-    var carData: SCCarData?{
+    var carDataViewModel: SCCarViewModel?{
         didSet{
-           carImageView.image = carData?.carImage
-            nameLabel.text = carData?.Title
-            priceLabel.text = carData?.Price
-            locationLabel.text = carData?.Location
+            carImageView.setImage(
+                urlString: carDataViewModel?.carData.MainPhoto,
+                backgroundColor: UIColor.white,
+                placeholderImage: nil)
+//            carImageView.image = carData?.carImage
+            nameLabel.text = carDataViewModel?.carData.Title
+            priceLabel.text = carDataViewModel?.carData.Price
+            locationLabel.text = carDataViewModel?.carData.Location
         }
     }
     @IBOutlet weak var carImageView: UIImageView!

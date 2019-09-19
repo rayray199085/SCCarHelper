@@ -49,7 +49,7 @@
 		0D057B5222C4924B0016A9F9 /* CABasicAnimation+SCAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D057B4522C4924A0016A9F9 /* CABasicAnimation+SCAddition.m */; };
 		0D057B5322C4924B0016A9F9 /* UILabel+SCAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D057B4622C4924A0016A9F9 /* UILabel+SCAddition.m */; };
 		0D057B5422C4924B0016A9F9 /* UIColor+SCAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D057B4822C4924A0016A9F9 /* UIColor+SCAddition.m */; };
-		0D057B5922C493870016A9F9 /* SCCarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D057B5822C493870016A9F9 /* SCCarViewModel.swift */; };
+		0D057B5922C493870016A9F9 /* SCCarListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D057B5822C493870016A9F9 /* SCCarListViewModel.swift */; };
 		0D057B5B22C493DF0016A9F9 /* SCNetworkManager+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D057B5A22C493DF0016A9F9 /* SCNetworkManager+extension.swift */; };
 		0D057B5D22C4962D0016A9F9 /* SCCarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D057B5C22C4962D0016A9F9 /* SCCarData.swift */; };
 		0D057B5F22C496AE0016A9F9 /* SCCarResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D057B5E22C496AE0016A9F9 /* SCCarResult.swift */; };
@@ -58,6 +58,8 @@
 		0D057B6722C49F340016A9F9 /* SCCarDetailsOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D057B6622C49F340016A9F9 /* SCCarDetailsOverview.swift */; };
 		0D057B6922C4A4680016A9F9 /* SCImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D057B6822C4A4680016A9F9 /* SCImageCollectionViewCell.swift */; };
 		0D057B6B22C4A4790016A9F9 /* SCImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D057B6A22C4A4790016A9F9 /* SCImageCollectionViewCell.xib */; };
+		0D9F8D6322D9C390002C49F6 /* SCCarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9F8D6222D9C390002C49F6 /* SCCarViewModel.swift */; };
+		0D9F8D6522D9C6BC002C49F6 /* SCCarDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9F8D6422D9C6BC002C49F6 /* SCCarDetailsViewModel.swift */; };
 		9B49B205F98437AADB55DEA0 /* Pods_SCCarHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B12431ADE5DA52A197B6A8 /* Pods_SCCarHelper.framework */; };
 /* End PBXBuildFile section */
 
@@ -138,7 +140,7 @@
 		0D057B4B22C4924A0016A9F9 /* SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAdditions.h; sourceTree = "<group>"; };
 		0D057B4C22C4924A0016A9F9 /* NSString+SCAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SCAddition.h"; sourceTree = "<group>"; };
 		0D057B5722C4927A0016A9F9 /* HelperBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelperBridge.h; sourceTree = "<group>"; };
-		0D057B5822C493870016A9F9 /* SCCarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCarViewModel.swift; sourceTree = "<group>"; };
+		0D057B5822C493870016A9F9 /* SCCarListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCarListViewModel.swift; sourceTree = "<group>"; };
 		0D057B5A22C493DF0016A9F9 /* SCNetworkManager+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNetworkManager+extension.swift"; sourceTree = "<group>"; };
 		0D057B5C22C4962D0016A9F9 /* SCCarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCarData.swift; sourceTree = "<group>"; };
 		0D057B5E22C496AE0016A9F9 /* SCCarResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCarResult.swift; sourceTree = "<group>"; };
@@ -147,6 +149,8 @@
 		0D057B6622C49F340016A9F9 /* SCCarDetailsOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCarDetailsOverview.swift; sourceTree = "<group>"; };
 		0D057B6822C4A4680016A9F9 /* SCImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		0D057B6A22C4A4790016A9F9 /* SCImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		0D9F8D6222D9C390002C49F6 /* SCCarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCarViewModel.swift; sourceTree = "<group>"; };
+		0D9F8D6422D9C6BC002C49F6 /* SCCarDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCarDetailsViewModel.swift; sourceTree = "<group>"; };
 		381305D33B9FC218FFA98844 /* Pods-SCCarHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCCarHelper.release.xcconfig"; path = "Target Support Files/Pods-SCCarHelper/Pods-SCCarHelper.release.xcconfig"; sourceTree = "<group>"; };
 		86B12431ADE5DA52A197B6A8 /* Pods_SCCarHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SCCarHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3856554EE4720D8111E53B2 /* Pods-SCCarHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCCarHelper.debug.xcconfig"; path = "Target Support Files/Pods-SCCarHelper/Pods-SCCarHelper.debug.xcconfig"; sourceTree = "<group>"; };
@@ -254,7 +258,9 @@
 		0D057ACE22C4392E0016A9F9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				0D057B5822C493870016A9F9 /* SCCarViewModel.swift */,
+				0D057B5822C493870016A9F9 /* SCCarListViewModel.swift */,
+				0D9F8D6222D9C390002C49F6 /* SCCarViewModel.swift */,
+				0D9F8D6422D9C6BC002C49F6 /* SCCarDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -652,9 +658,11 @@
 				0D057B5D22C4962D0016A9F9 /* SCCarData.swift in Sources */,
 				0D057B6922C4A4680016A9F9 /* SCImageCollectionViewCell.swift in Sources */,
 				0D057B2C22C491040016A9F9 /* UIWindow+extension.swift in Sources */,
-				0D057B5922C493870016A9F9 /* SCCarViewModel.swift in Sources */,
+				0D9F8D6322D9C390002C49F6 /* SCCarViewModel.swift in Sources */,
+				0D057B5922C493870016A9F9 /* SCCarListViewModel.swift in Sources */,
 				0D057B5F22C496AE0016A9F9 /* SCCarResult.swift in Sources */,
 				0D057B3522C491040016A9F9 /* String+extension.swift in Sources */,
+				0D9F8D6522D9C6BC002C49F6 /* SCCarDetailsViewModel.swift in Sources */,
 				0D057B3122C491040016A9F9 /* UINavigationController+extension.swift in Sources */,
 				0D057B3422C491040016A9F9 /* UIViewController+extension.swift in Sources */,
 				0D057B2922C491040016A9F9 /* UIImageView+extension.swift in Sources */,

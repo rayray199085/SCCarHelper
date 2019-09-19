@@ -8,16 +8,11 @@
 
 import UIKit
 
-class SCCarData: NSObject {
-    @objc var DetailsUrl: String?
-    @objc var Id: String?
-    @objc var Location: String?
-    @objc var MainPhoto: String?
-    @objc var Price: String?
-    @objc var Title: String?
-    @objc var carImage: UIImage?
-    
-    override var description: String{
-        return yy_modelDescription()
-    }
+struct SCCarData: Decodable {
+    var DetailsUrl: String?
+    var Id: String?
+    var Location: String?
+    var MainPhoto: String?
+    var Price: String?
+    var Title: String?
 }

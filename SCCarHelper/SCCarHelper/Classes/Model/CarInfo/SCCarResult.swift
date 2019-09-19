@@ -9,13 +9,6 @@
 import UIKit
 import YYModel
 
-class SCCarResult: NSObject {
-    @objc var Result: [SCCarData]?
-    
-    @objc class func modelContainerPropertyGenericClass()->[String:AnyClass]{
-        return ["Result": SCCarData.self]
-    }
-    override var description: String{
-        return yy_modelDescription()
-    }
+struct SCCarResult: Decodable {
+    var Result: [SCCarData]?
 }

@@ -12,7 +12,7 @@ import SVProgressHUD
 private let reuseIdentifier = "Cell"
 
 class SCCollectionViewController: UICollectionViewController {
-    private let viewModel = SCCarViewModel()
+    private let listViewModel = SCCarListViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -52,7 +52,7 @@ private extension SCCollectionViewController{
     
     func loadData(){
         SVProgressHUD.show()
-        viewModel.loadCarData { [weak self](isSuccess) in
+        listViewModel.loadCarData { [weak self](isSuccess) in
             self?.collectionView.reloadData()
             SVProgressHUD.dismiss()
         }
@@ -62,19 +62,19 @@ private extension SCCollectionViewController{
 //Mark: -collection view methods
 extension SCCollectionViewController{
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.result?.Result?.count ?? 0
+        return listViewModel.carDataViewModels?.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SCCollectionViewCell
-        cell.carData = viewModel.result?.Result?[indexPath.item]
+        cell.carDataViewModel = listViewModel.carDataViewModels?[indexPath.row]
         return cell
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as? SCCollectionViewCell
         let vc = SCDetailsViewController()
-        vc.viewModel = viewModel
-        viewModel.detailsUrlString = cell?.carData?.DetailsUrl
+        vc.listViewModel = listViewModel
+        listViewModel.detailsUrlString = cell?.carDataViewModel?.carData.DetailsUrl
         navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -8,9 +8,9 @@
 
 import UIKit
 
-class SCCarDetailsData: NSObject {
-    @objc var Id: String?
-    @objc var Overview: SCCarDetailsOverview?
-    @objc var SaleStatus: String?
-    @objc var Comments: String?
+struct SCCarDetailsData: Decodable{
+    var Id: String?
+    var Overview: SCCarDetailsOverview?
+    var SaleStatus: String?
+    var Comments: String?
 }

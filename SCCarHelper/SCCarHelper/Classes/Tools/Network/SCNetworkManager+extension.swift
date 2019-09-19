@@ -10,20 +10,18 @@ import Foundation
 import Alamofire
 
 extension SCNetworkManager{
-    func getCarData(completion:@escaping (_ dict: [String: Any]?,_ isSuccess: Bool)->()){
+    func getCarData(completion:@escaping (_ data: Data?,_ isSuccess: Bool)->()){
         let urlString = "https://app-car.carsalesnetwork.com.au/stock/car/test/v1/listing"
         let params = ["username":"test","password":"2h7H53eXsQupXvkz"]
-        request(urlString: urlString, method: HTTPMethod.get, params: params) { (res, isSuccess, statusCode, error) in
-            let dict = res as? [String: Any]
-            completion(dict, isSuccess)
+        request(urlString: urlString, method: HTTPMethod.get, params: params) { (data, res, isSuccess, statusCode, error) in
+            completion(data, isSuccess)
         }
     }
-    func getCarDetailsData(detailsUrlString: String, completion:@escaping (_ dict: [String: Any]?,_ isSuccess: Bool)->()){
+    func getCarDetailsData(detailsUrlString: String, completion:@escaping (_ data: Data?,_ isSuccess: Bool)->()){
         let urlString = "https://app-car.carsalesnetwork.com.au\(detailsUrlString)"
         let params = ["username":"test","password":"2h7H53eXsQupXvkz"]
-        request(urlString: urlString, method: HTTPMethod.get, params: params) { (res, isSuccess, _, _) in
-            let dict = res as? [String: Any]
-            completion(dict, isSuccess)
+        request(urlString: urlString, method: HTTPMethod.get, params: params) { (data, res, isSuccess, _, _) in
+            completion(data, isSuccess)
         }
     }
 }
